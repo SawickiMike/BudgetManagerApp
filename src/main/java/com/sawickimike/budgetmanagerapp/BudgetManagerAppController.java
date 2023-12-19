@@ -3,7 +3,7 @@ package com.sawickimike.budgetmanagerapp;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class BudgetMenagerAppController {
+public class BudgetManagerAppController {
     @FXML
     private Label welcomeText;
 

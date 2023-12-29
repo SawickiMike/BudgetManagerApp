@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import models.SavingsGoal;
 
+
 public class GoalService {
     private List<SavingsGoal> savingsGoals;
 
@@ -12,54 +13,50 @@ public class GoalService {
     }
 
     // Functions for managing savings goals
+
     public void addSavingsGoal(SavingsGoal goal) {
         savingsGoals.add(goal);
     }
 
-    public void editSavingsGoal(int index, SavingsGoal updatedGoal) {
-        if (index >= 0 && index < savingsGoals.size()) {
-            savingsGoals.set(index, updatedGoal);
-        } else {
-            System.out.println("Invalid index for editing savings goal.");
+    public void editSavingsGoal(String goalName, SavingsGoal updatedGoal) {
+        for (int i = 0; i < savingsGoals.size(); i++) {
+            SavingsGoal goal = savingsGoals.get(i);
+            if (goal.getGoalName().equals(goalName)) {
+                savingsGoals.set(i, updatedGoal);
+                return;
+            }
         }
+        System.out.println("Goal '" + goalName + "' not found.");
     }
 
-    public void deleteSavingsGoal(int index) {
-        if (index >= 0 && index < savingsGoals.size()) {
-            savingsGoals.remove(index);
-        } else {
-            System.out.println("Invalid index for deleting savings goal.");
+    public void deleteSavingsGoal(String goalName) {
+        for (int i = 0; i < savingsGoals.size(); i++) {
+            SavingsGoal goal = savingsGoals.get(i);
+            if (goal.getGoalName().equals(goalName)) {
+                savingsGoals.remove(i);
+                return;
+            }
         }
-    }
-
-    // Calculate total saved amount for all goals
-    public double calculateTotalSavedAmount() {
-        double totalSaved = 0;
-        for (SavingsGoal goal : savingsGoals) {
-            totalSaved += goal.getCurrentAmount();
-        }
-        return totalSaved;
-    }
-
-    // Calculate total target amount for all goals
-    public double calculateTotalTargetAmount() {
-        double totalTarget = 0;
-        for (SavingsGoal goal : savingsGoals) {
-            totalTarget += goal.getTargetAmount();
-        }
-        return totalTarget;
-    }
-
-    // Calculate progress for all goals (as a percentage)
-    public double calculateGoalProgress() {
-        if (calculateTotalTargetAmount() > 0) {
-            return (calculateTotalSavedAmount() / calculateTotalTargetAmount()) * 100;
-        }
-        return 0;
+        System.out.println("Goal '" + goalName + "' not found.");
     }
 
     // Getters for savings goals list
+
     public List<SavingsGoal> getSavingsGoals() {
         return savingsGoals;
     }
+
+    // Additional method to get all goals as a formatted string
+    public String getAllGoalsAsString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("All Savings Goals:\n");
+        for (SavingsGoal goal : savingsGoals) {
+            sb.append("Goal Name: ").append(goal.getGoalName()).append("\n");
+            sb.append("Target Amount: ").append(goal.getTargetAmount()).append("\n");
+            sb.append("Current Amount Saved: ").append(goal.getCurrentAmount()).append("\n");
+            sb.append("---------------------------------\n");
+        }
+        return sb.toString();
+    }
 }
+

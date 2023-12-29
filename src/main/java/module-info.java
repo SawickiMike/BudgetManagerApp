@@ -8,9 +8,12 @@ module com.sawickimike.budgetmanagerapp {
     requires net.synedra.validatorfx;
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
-    requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
+    requires java.sql;
+    requires javafx.swing;
+
 
     opens com.sawickimike.budgetmanagerapp to javafx.fxml;
-    exports com.sawickimike.budgetmanagerapp;
+    exports ui;
+    opens ui to javafx.fxml;
 }

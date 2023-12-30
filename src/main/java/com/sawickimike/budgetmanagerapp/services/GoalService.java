@@ -1,8 +1,8 @@
-package services;
+package com.sawickimike.budgetmanagerapp.services;
 
 import java.util.ArrayList;
 import java.util.List;
-import models.SavingsGoal;
+import com.sawickimike.budgetmanagerapp.models.SavingsGoal;
 
 
 public class GoalService {

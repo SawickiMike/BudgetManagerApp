@@ -1,4 +1,4 @@
-package services;
+package com.sawickimike.budgetmanagerapp.services;
 
 public class UserService {
     private String username;

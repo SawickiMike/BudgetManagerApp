@@ -1,9 +1,9 @@
-package services;
+package com.sawickimike.budgetmanagerapp.services;
 
 import java.util.ArrayList;
 import java.util.List;
-import models.Expense;
-import models.Income;
+import com.sawickimike.budgetmanagerapp.models.Expense;
+import com.sawickimike.budgetmanagerapp.models.Income;
 
 
     public class BudgetService {

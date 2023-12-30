@@ -1,5 +1,5 @@
-package services;
-import models.*;
+package com.sawickimike.budgetmanagerapp.services;
+import com.sawickimike.budgetmanagerapp.models.*;
 
 import java.util.List;
 

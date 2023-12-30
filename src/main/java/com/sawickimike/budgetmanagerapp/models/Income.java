@@ -1,4 +1,4 @@
-package models;
+package com.sawickimike.budgetmanagerapp.models;
 
 public class Income {
     private String source;

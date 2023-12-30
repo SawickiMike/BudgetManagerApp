@@ -12,7 +12,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="BudgetManagerApp" options="--add-exports eu.hansolo.fx.countries/javafx.scene.control=com.sawickimike.budgetmanagerapp" />
+      <module name="BudgetManagerApp" options="" />
     </option>
   </component>
 </project>

@@ -14,6 +14,6 @@ module com.sawickimike.budgetmanagerapp {
 
 
     opens com.sawickimike.budgetmanagerapp to javafx.fxml;
-    exports ui;
-    opens ui to javafx.fxml;
+    exports com.sawickimike.budgetmanagerapp.ui;
+    opens com.sawickimike.budgetmanagerapp.ui to javafx.fxml;
 }

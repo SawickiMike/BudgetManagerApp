@@ -1,4 +1,4 @@
-package services;
+package com.sawickimike.budgetmanagerapp.services;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

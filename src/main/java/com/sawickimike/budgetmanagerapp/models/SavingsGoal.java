@@ -1,4 +1,4 @@
-package models;
+package com.sawickimike.budgetmanagerapp.models;
 
 public class SavingsGoal {
     private String goalName;
